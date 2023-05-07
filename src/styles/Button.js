@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../Constants/Themes";
 
 export const Button = styled.button`
   text-decoration: none;
@@ -18,7 +19,7 @@ export const Button = styled.button`
   &:hover,
   &:active {
     box-shadow: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
-    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
+    box-shadow: ${({ theme }) => COLORS.shadowSupport};
     transform: scale(0.96);
   }
 

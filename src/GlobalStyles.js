@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import { COLORS, FONTS, DEVICE } from "../src/Constants/Themes";
 export const GlobalStyle = createGlobalStyle`
 
 * {
@@ -48,13 +48,13 @@ h4 {
 }
 
 h1 {
-  color: ${({ theme }) => theme.colors.heading};
+  color: ${COLORS.heading};
   font-size: 6rem;
   font-weight: 900;
 }
 
  h2 {
-   color: ${({ theme }) => theme.colors.heading};
+  color: ${COLORS.heading};
    font-size: 4.4rem;
    font-weight: 300;
    white-space: normal;
@@ -67,7 +67,7 @@ h3 {
 }
 
 p, button {
-  color: ${({ theme }) => theme.colors.text};
+  color: ${COLORS.text};
   font-size: 1.65rem;
   line-height: 1.5;
   font-weight:400;
@@ -129,8 +129,8 @@ ${"" /* resuable code section  */}
       top: 15%;
       right: 10%;
       text-transform: uppercase;
-      background-color: ${({ theme }) => theme.colors.bg};
-      color: ${({ theme }) => theme.colors.helper};
+      background-color: ${COLORS.bg};
+      color: ${COLORS.helper};
       padding: 0.8rem 2rem;
       font-size: 1.2rem;
       border-radius: 2rem;
@@ -138,17 +138,17 @@ ${"" /* resuable code section  */}
 
 input, textarea{
     max-width: 50rem;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${COLORS.black};
     padding: 1.6rem 2.4rem;
-    border: 1px solid ${({ theme }) => theme.colors.border};
+    border: 1px solid ${COLORS.border};
     text-transform: uppercase;
-   box-shadow: ${({ theme }) => theme.colors.shadowSupport};
+   box-shadow: ${COLORS.shadowSupport};
 }
     input[type="submit"]{
     max-width: 16rem;
     margin-top: 2rem;
-    background-color: ${({ theme }) => theme.colors.btn};
-    color: ${({ theme }) => theme.colors.white};
+    background-color: ${COLORS.btn};
+    color: ${COLORS.white};
     padding: 1.4rem 2.2rem;
     border-style: solid;
     border-width: .1rem;
@@ -157,14 +157,14 @@ input, textarea{
     cursor: pointer;
     }
 
-@media (max-width: ${({ theme }) => theme.media.tab}) {
+@media (max-width: ${DEVICE.tablet}) {
     .container {
     max-width: 130rem;
     padding: 0 3.2rem;
   }
   }
 
-   @media (max-width: ${({ theme }) => theme.media.mobile}) {
+   @media (max-width: ${DEVICE.mobile}) {
        html {
       font-size: 50%;
     }
