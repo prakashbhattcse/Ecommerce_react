@@ -16,7 +16,7 @@ const AppContext = createContext();
             const products = res.data;
         }
 
-
+//h
         // const [state, dispatch] = useReducer(reducer, initialState, init)
 
         useEffect(() => {
